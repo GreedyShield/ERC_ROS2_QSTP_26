@@ -5,7 +5,7 @@ from rclpy.node import Node
 from std_msgs.msg import Float32
 
 
-class Listener(Node):
+class Listener(Node): #Inherits from the Node class of rclpyy
 
     def __init__(self):
 
@@ -30,13 +30,9 @@ class Listener(Node):
 def main(args=None):
 
     rclpy.init(args=args)
-
     node = Listener()
-
     rclpy.spin(node)
-
     node.destroy_node()
-
     rclpy.shutdown()
 
 
